@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  agg:
+    image: ${DOCKER_REGISTRY-}agg
+    build:
+      context: .
+      dockerfile: Agg/Dockerfile
+
+  firstwebapp:
+    image: ${DOCKER_REGISTRY-}firstwebapp
+    build:
+      context: .
+      dockerfile: FirstWebApp/Dockerfile
+
